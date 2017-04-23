@@ -1,0 +1,256 @@
+.specialty {
+  text-transform: capitalize;
+  font-family: 'Nova Square', cursive;
+  color: white;
+}
+
+.amount {
+  color: #80ffff;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.specialty:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.specialty-info {
+  flex-grow: 1;
+  position: relative;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 25px;
+  margin: 0 0 .25em;
+  font-family: 'Nova Square', cursive;
+}
+
+.total-component .saved-states h3 {
+  margin-top: .5em;
+}
+
+button.saveButton {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #05132a;
+  border: 2px solid #1c58a3;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+button.load-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #05132a;
+  border: 2px solid #1c58a3;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: auto;
+}
+
+button.delete-btn {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: #cccccc;
+  margin-left: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.fa-check {
+  color: green;
+  padding-left: 10px;
+}
+
+nav {
+  position:absolute;
+  left: calc(100% - 5px);
+  top: 30px;
+}
+
+nav a {
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px black;
+  font-weight: 900;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  text-transform: capitalize;
+  background-color: #273348;
+  display: block;
+  border-top: 5px solid;
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+  border-color: #273348;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+nav a.active {
+  background-color: #100F17;
+  cursor: default;
+}
+
+.amt {
+  font-size: 20px;
+  font-family: 'Roboto Mono';
+}
+
+.next-amt {
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.row {
+  display: flex;
+}
+
+.row > *:last-child {
+  margin-left: auto;
+}
+
+.tabs {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #100F17;
+  border-radius: 10px;
+  border: 5px solid #273348;
+  position: relative;
+  min-height: 550px;
+}
+
+.total-component {
+  width: 250px;
+  left: -280px;
+  position: absolute;
+  padding: 10px;
+  background-color: #100F17;
+  border-radius: 10px;
+  border: 5px solid #273348;
+  color: white;
+}
+
+.total-component h3 {
+  margin: 0 0 .5em;
+}
+
+.saved-states ul {
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.saved-states ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  position: relative
+}
+
+.plus-minus-widget {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100px;
+  align-self: center;
+}
+
+.plus-minus-widget button {
+  width: 50%;
+  height: 45px;
+  font-size: 30px;
+  line-height: 42px;
+  border-radius: 5px;
+  background-color: #05132a;
+  border: 2px solid #1c58a3;
+  color: white;
+  cursor: pointer;
+}
+
+.masterText {
+  color: red;
+  font-family: 'Montserrat';
+  font-size: 110%;
+}
+
+.plus-minus-widget button[disabled] {
+  background-color: rgb(39, 51, 72);
+  border-color: transparent;
+  cursor: default;
+}
+
+.plus-minus-widget button:first-child {
+  margin-left: 10px;
+}
+
+.icon {
+  box-sizing: content-box;
+  height: 60px;
+  width: 60px;
+  align-self: center;
+  margin-right: 20px;
+  background-image: url(../assets/icons.jpg);
+  border: 5px solid black;
+  border-radius: 3px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #05132a;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #1c58a3;
+  font-family: 'Montserrat';
+  bottom: calc(100% + 5px);
+  margin-right: 20px;
+  text-transform: none;
+}
+
+/* nav colors */
+
+nav a.rookie {
+  color: blue;
+}
+
+nav a.beginner {
+  color: #80ff80;
+}
+
+nav a.amateur {
+  color: #80ffff;
+}
+
+nav a.professional {
+  color: #ffa67b;
+}
+
+nav a.expert {
+  color: #ff0000;
+}
+
+nav a.master {
+  color: #8000ff;
+}
+
+nav a.divine {
+  color: #ffff00;
+}
