@@ -27,8 +27,6 @@ export class Purchasable extends Specialty {
     const absDif = Math.abs(dif);
     const operator = this.modifier.slice(0, 1);
     const modifier = parseInt(this.modifier.slice(1), 10);
-    //console.log(modifier);
-    //console.log(absDif);
     let totalCost = 0;
 
     for (let i = 0; i < absDif; i++) {
@@ -37,18 +35,30 @@ export class Purchasable extends Specialty {
         if (operator === '+') {
           this.start += modifier;
         } else {
-          this.start *= modifier;
+          if (this.start >= 44800) {
+            this.start = 50000;
+          } else {
+            this.start *= modifier;  
+          }
         }
+        this.purchased++;
       } else {
         if (operator === '+') {
           this.start -= modifier;
         } else {
-          this.start /= modifier;
+          if (this.start === 50000 && this.purchased === 8) {
+            this.start = 44800;
+          } else if (this.start === 50000) {
+            this.start === 50000;
+          } else {
+            this.start /= modifier;
+          }
         }
         totalCost -= this.start;
+        this.purchased--;
       }
     }
-    this.purchased = newAmt;
+    //this.purchased = newAmt;
 
     return totalCost;
   }
