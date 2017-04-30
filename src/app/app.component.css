@@ -1,6 +1,21 @@
 h1 {
   text-align: center;
-  font-family: 'Nova Square', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: 900
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container footer {
+  margin-top: auto;
+}
+
+@media (min-width: 375px) {
+  h1 {font-size: 50px;}
 }

@@ -2,8 +2,34 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #cccccc;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+footer {
+  font-size: 14px;
+  background-color: #aaaaaa;
+  padding: 10px;
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+  /*position: fixed;
+  bottom: 0;
+  width: 100%;*/
+}
+
+footer p {
+  margin: 0;
 }
 
 * {
   box-sizing: border-box;
+}
+
+@media (min-width: 375px) {
+  footer {
+    font-size: 16px;
+  }
 }

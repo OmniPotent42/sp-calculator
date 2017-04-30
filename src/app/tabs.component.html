@@ -1,6 +1,9 @@
 <div class="container">
   <div class="total-component">
-    <h3>Total SP<br><span class="amount">{{spent}}</span></h3>
+    <div class="amount-container">
+      <h3>Total SP</h3>
+      <h3 class="amount">{{spent}}</h3>
+    </div>
     <div class="saveForm">
       <input [(ngModel)]="stateName" type="text" placeholder="build name">
       <button class="saveButton" (click)="saveState(stateName)">Save</button>
@@ -20,33 +23,40 @@
       </ul>
     </div>
   </div>
-  <div class="tabs">
-    <div class="tab" [hidden]="tab.tabName !== activeTab" *ngFor="let tab of tabs">
-      <div class="specialty" *ngFor="let spec of tab.specialties">
-        <div class="row">
-          <div class="icon {{toClass(spec.icon)}}" (mouseover)="toggleTooltip(spec)" (mouseleave)="toggleTooltip(spec)">
-          </div>
-          <div class="specialty-info">
-            <div class="tooltip" [hidden]="!spec.showTooltip">{{capitalize(spec.tooltip)}}</div>
-            <h3>{{spec.name}}</h3>
-            <div class="row">
-              <div class="amt">{{spec.purchased}}/{{spec.max}}</div>
-              <div class="next-amt">
-                <span [hidden]="spec.purchased === spec.max">{{spec.start}}</span>
-                <span class="masterText" [hidden]="spec.purchased !== spec.max">Master</span>
+  <div class="tabs-container">
+    <nav>
+      <a [ngClass]="tab.tabName" [class.active]="tab.tabName === activeTab" (click)="setActiveTab(tab.tabName)" *ngFor="let tab of tabs">
+        {{tab.tabName}}
+      </a>
+    </nav>
+    <div class="tabs">
+      <div class="tab" [hidden]="tab.tabName !== activeTab" *ngFor="let tab of tabs">
+        <div class="specialty" *ngFor="let spec of tab.specialties">
+          <div class="row">
+            <div class="icon {{toClass(spec.icon)}}" (mouseover)="toggleTooltip(spec)" (mouseleave)="toggleTooltip(spec)">
+            </div>
+            <div class="specialty-info">
+              <div class="tooltip" [hidden]="!spec.showTooltip">{{capitalize(spec.tooltip)}}</div>
+              <h3>{{spec.name}}</h3>
+              <div class="row">
+                <div class="amt">{{spec.purchased}}/{{spec.max}}</div>
+                <div class="next-amt">
+                  <span [hidden]="spec.purchased === spec.max">{{spec.start}}</span>
+                  <span class="masterText" [hidden]="spec.purchased !== spec.max">Master</span>
+                </div>
               </div>
             </div>
+            <div class="plus-minus-widget">
+              <button (click)="purchase(spec, 1, $event)" [disabled]="spec.purchased === spec.max">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
+              <button (click)="purchase(spec, -1, $event)" [disabled]="spec.purchased === 0">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+              </button>
+            </div>
           </div>
-          <div class="plus-minus-widget">
-            <button (click)="purchase(spec, 1, $event)" [disabled]="spec.purchased === spec.max"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            <button (click)="purchase(spec, -1, $event)" [disabled]="spec.purchased === 0"><i class="fa fa-minus" aria-hidden="true"></i></button></div>
         </div>
       </div>
     </div>
   </div>
-  <nav>
-    <a [ngClass]="tab.tabName" [class.active]="tab.tabName === activeTab" (click)="setActiveTab(tab.tabName)" *ngFor="let tab of tabs">
-      {{tab.tabName}}
-    </a>
-  </nav>
 </div>
