@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { TotalComponent } from './total.component';
 import { TabsComponent } from './tabs.component';
 import { SpecialtyService } from './specialty.service';
 import { UserService } from './user.service';
@@ -11,7 +12,8 @@ import { UserService } from './user.service';
 @NgModule({
   declarations: [
     AppComponent,
-    TabsComponent
+    TabsComponent,
+    TotalComponent
   ],
   imports: [
     BrowserModule,

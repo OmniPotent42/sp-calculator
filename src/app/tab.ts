@@ -1,6 +1,6 @@
-import { Specialty } from './specialty';
+import { Purchasable } from './purchasable';
 
 export class Tab {
   tabName: string;
-  specialties: Specialty[];
+  specialties: Purchasable[];
 }

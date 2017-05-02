@@ -1,0 +1,21 @@
+<div class="total-component">
+  <div class="amount-container">
+    <h3>Total SP</h3>
+    <h3 class="amount">{{spent}}</h3>
+  </div>
+  <div class="saveForm">
+    <input [(ngModel)]="stateName" type="text" placeholder="build name">
+    <button [class.saved]="!notSaved" class="saveButton" (click)="saveState(stateName)">Save</button>
+  </div>
+  <div class="saved-states">
+    <h3>Saved Builds</h3>
+    <ul>
+      <li *ngFor="let state of allStates">
+        {{state.name}}
+        <button class="load-btn" (click)="loadState(state)">Load</button>
+        <button class="delete-btn" (click)="confirmDelete(state)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </li>
+      <span *ngIf="!allStates.length">Looks like you don't have any saved builds.</span>
+    </ul>
+  </div>
+</div>

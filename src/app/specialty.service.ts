@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Purchasable } from './purchasable';
 
 @Injectable()
 export class SpecialtyService {
@@ -441,6 +442,16 @@ export class SpecialtyService {
   ];
 
   public getData = function() {
-    return this.spData;
+    const tabs = this.spData;
+    
+    for (let i = 0; i < tabs.length; i++) {
+      for (let j = 0; j < tabs[i].specialties.length; j++) {
+        tabs[i].specialties[j] = new Purchasable(tabs[i].specialties[j]);
+
+      }
+    }
+    
+    console.log(tabs);
+    return tabs;
   };
 }
