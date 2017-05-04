@@ -3,6 +3,14 @@ input {
   border: none;
 }
 
+input[type="number"] {
+  width: 45px;
+  padding: 2px 5px;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-size: 1em;
+}
+
 .amount {
   color: #80ffff;
 }
@@ -87,12 +95,36 @@ button.delete-btn {
   margin-left: auto;
 }
 
-.total-component .saved-states h3 {
-  margin-top: .5em;
+.amount-container h3 {
+  margin-top: 0;
 }
 
-.total-component h3 {
-  margin: 0 0 .5em;
+.build-stats h3 {
+  margin-bottom: .1em;
+}
+
+h3 {
+  margin: .5em 0;
+}
+
+table {
+  font-size: 1em;
+}
+
+td:first-child {
+  padding-right: 15px;
+}
+
+td:last-child {
+  font-family: 'Roboto Mono';
+  padding-left: 15px;
+  font-size: 1.1em;
+  text-align: right;
+  width: 4em;
+}
+
+td:last-child:after {
+  content: '%';
 }
 
 .saved-states ul {
@@ -113,8 +145,10 @@ button.delete-btn {
   .total-component {
     padding: 20px;
     max-width: 345px;
-    /*margin-left: auto;
-    margin-right: auto;*/
+  }
+  
+  table {
+    font-size: 1.2em;
   }
 }
 

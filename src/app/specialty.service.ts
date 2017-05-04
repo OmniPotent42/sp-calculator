@@ -13,7 +13,8 @@ export class SpecialtyService {
           max: 5,
           modifier: '+40',
           icon: 'attack damage',
-          tooltip: 'all ally Attack Damage increased by invested points x 3%'
+          tooltip: 'all ally Attack Damage increased by invested points x 3%',
+          ad: 3
         },
         {
           name: 'attack speed 1',
@@ -21,7 +22,8 @@ export class SpecialtyService {
           max: 5,
           modifier: '+40',
           icon: 'attack speed',
-          tooltip: 'all ally Attack Speed increased by invested points x 3%'
+          tooltip: 'all ally Attack Speed increased by invested points x 3%',
+          as: 3
         },
         {
           name: 'skill damage 1',
@@ -29,7 +31,8 @@ export class SpecialtyService {
           max: 5,
           modifier: '+40',
           icon: 'skill damage',
-          tooltip: 'all ally Skill Damage increased by invested points x 5%'
+          tooltip: 'all ally Skill Damage increased by invested points x 5%',
+          sd: 5
         },
         {
           name: 'exchange+',
@@ -50,7 +53,8 @@ export class SpecialtyService {
           max: 10,
           modifier: '+75',
           icon: 'critical chance',
-          tooltip: 'all ally critical chance increased by invested points x 1%'
+          tooltip: 'all ally critical chance increased by invested points x 1%',
+          cc: 1
         },
         {
           name: 'movement speed+',
@@ -103,7 +107,8 @@ export class SpecialtyService {
           max: 15,
           modifier: '+70',
           icon: 'attack damage',
-          tooltip: 'all ally attack damage increased by invested points x 2%'
+          tooltip: 'all ally attack damage increased by invested points x 2%',
+          ad: 2
         },
         {
           name: 'attack speed 2',
@@ -111,7 +116,8 @@ export class SpecialtyService {
           max: 15,
           modifier: '+70',
           icon: 'attack speed',
-          tooltip: 'all ally attack speed increased by invested points x 1.5%'
+          tooltip: 'all ally attack speed increased by invested points x 1.5%',
+          as: 1.5
         },
         {
           name: 'skill damage 2',
@@ -119,7 +125,8 @@ export class SpecialtyService {
           max: 15,
           modifier: '+70',
           icon: 'skill damage',
-          tooltip: 'all ally skill damage increased by invested points x 4%'
+          tooltip: 'all ally skill damage increased by invested points x 4%',
+          sd: 4
         },
         {
           name: 'gas revision',
@@ -172,7 +179,8 @@ export class SpecialtyService {
           max: 60,
           modifier: '+75',
           icon: 'attack damage',
-          tooltip: 'all ally attack damage increased by invested points x 1%'
+          tooltip: 'all ally attack damage increased by invested points x 1%',
+          ad: 1
         },
         {
           name: 'attack speed 3',
@@ -180,7 +188,8 @@ export class SpecialtyService {
           max: 60,
           modifier: '+75',
           icon: 'attack speed',
-          tooltip: 'all ally attack speed increased by invested points x 0.5%'
+          tooltip: 'all ally attack speed increased by invested points x 0.5%',
+          as: .5
         },
         {
           name: 'skill damage 3',
@@ -188,7 +197,8 @@ export class SpecialtyService {
           max: 60,
           modifier: '+75',
           icon: 'skill damage',
-          tooltip: 'all ally skill damage increased by invested points x 3%'
+          tooltip: 'all ally skill damage increased by invested points x 3%',
+          sd: 3
         },
         {
           name: 'basic rank',
@@ -241,7 +251,8 @@ export class SpecialtyService {
           max: 60,
           modifier: '+75',
           icon: 'critical chance',
-          tooltip: 'all ally critical chance increased by invested points x 0.5%'
+          tooltip: 'all ally critical chance increased by invested points x 0.5%',
+          cc: .5
         },
         {
           name: 'movement speed 2',
@@ -379,7 +390,8 @@ export class SpecialtyService {
           max: 20,
           modifier: '+150',
           icon: 'attack damage',
-          tooltip: 'increase team attack damage by invested points x 1%'
+          tooltip: 'increase team attack damage by invested points x 1%',
+          ad: 1
         },
         {
           name: 'team attack speed',
@@ -387,7 +399,8 @@ export class SpecialtyService {
           max: 20,
           modifier: '+150',
           icon: 'attack speed',
-          tooltip: 'increase team attack speed by invested points x 1%'
+          tooltip: 'increase team attack speed by invested points x 1%',
+          as: 1
         },
         {
           name: 'team critical chance',
@@ -395,7 +408,8 @@ export class SpecialtyService {
           max: 20,
           modifier: '+150',
           icon: 'critical chance',
-          tooltip: 'increase team critical chance by invested points x 0.5%'
+          tooltip: 'increase team critical chance by invested points x 0.5%',
+          cc: .5
         },
         {
           name: 'team exchange+',
@@ -443,14 +457,14 @@ export class SpecialtyService {
 
   public getData = function() {
     const tabs = this.spData;
-    
+
     for (let i = 0; i < tabs.length; i++) {
       for (let j = 0; j < tabs[i].specialties.length; j++) {
         tabs[i].specialties[j] = new Purchasable(tabs[i].specialties[j]);
 
       }
     }
-    
+
     console.log(tabs);
     return tabs;
   };

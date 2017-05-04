@@ -1,7 +1,14 @@
 import { DataItem } from './data-item';
+import { Stats } from './stats';
 
 export class UserState {
   purchasedItems: DataItem[] = [];
+  baseStats: Stats = {
+    ad: 0,
+    as: 0,
+    sd: 0,
+    cc: 0
+  };
 
   constructor(public name) { };
 

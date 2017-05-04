@@ -7,6 +7,31 @@
     <input [(ngModel)]="stateName" type="text" placeholder="build name">
     <button [class.saved]="!notSaved" class="saveButton" (click)="saveState(stateName)">Save</button>
   </div>
+  <div class="build-stats">
+    <h3>Stats</h3>
+    <table>
+      <tr>
+        <td><input max="999" min="0" [(ngModel)]="baseStats.ad" type="number"></td>
+        <td>Attack Damage</td>
+        <td>{{baseStats.ad + stats.ad}}</td>
+      </tr>
+      <tr>
+        <td><input max="999" min="0" [(ngModel)]="baseStats.as" type="number"></td>
+        <td>Attack Speed</td>
+        <td>{{baseStats.as + stats.as}}</td>
+      </tr>
+      <tr>
+        <td><input max="999" min="0" [(ngModel)]="baseStats.sd" type="number"></td>
+        <td>Skill Damage</td>
+        <td>{{baseStats.sd + stats.sd}}</td>
+      </tr>
+      <tr>
+        <td><input max="999" min="0" [(ngModel)]="baseStats.cc" type="number"></td>
+        <td>Critical Chance</td>
+        <td>{{baseStats.cc + stats.cc}}</td>
+      </tr>
+    </table>
+  </div>
   <div class="saved-states">
     <h3>Saved Builds</h3>
     <ul>

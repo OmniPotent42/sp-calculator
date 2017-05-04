@@ -14,7 +14,7 @@ h1 {
 
 .components-container {
   max-width: 650px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   width: 100%;
 }
 

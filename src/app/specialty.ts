@@ -5,4 +5,8 @@ export class Specialty {
   modifier: string;
   icon: string;
   tooltip: string;
+  ad: number;
+  as: number;
+  sd: number;
+  cc: number;
 }

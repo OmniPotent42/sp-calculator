@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
 
 import { UserState } from './user-state';
+import { Stats } from './stats';
 
 @Injectable()
 export class UserService {
   public currentUserState: UserState = new UserState('default');
+
+/*  public saveBaseStats() {
+    const jsonStats = JSON.stringify()
+    localStorage.setItem('baseStats', )
+  }*/
 
   public saveState(name) {
     const didExist = localStorage.getItem(name);

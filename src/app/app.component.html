@@ -3,7 +3,7 @@
     {{title}}
   </h1>
   <div class="components-container">
-    <app-total [tabs]="tabData" [spent]="spent" (purchaseEvent)="purchase($event)"></app-total>
+    <app-total [tabs]="tabData" [spent]="spent" (purchaseEvent)="purchase($event)" [stats]="stats"></app-total>
     <app-tabs [tabs]="tabData" (purchaseEvent)="purchase($event)"></app-tabs>
   </div>
   <footer>
