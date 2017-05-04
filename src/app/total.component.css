@@ -4,11 +4,11 @@ input {
 }
 
 input[type="number"] {
-  width: 45px;
-  padding: 2px 5px;
+  width: 50px;
+  padding: 2px;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  font-size: 1em;
+  font-size: .875em;
 }
 
 .amount {
