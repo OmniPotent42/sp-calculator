@@ -8,6 +8,6 @@ You can view the app here: https://omnipotent42.github.io/sp-calculator/
 
 ## Technologies used:
 
-Angular2
-Typescript
-Sass (for image sprites)
+* Angular2 (with AngularCLI)
+* Typescript
+* Sass (for image sprites)
